@@ -1,0 +1,28 @@
+package com.programs;
+
+public class Firstprogram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// To find which one is greater
+		
+		int a,b,c,d;
+		
+		a=100;
+		b=10;
+		c=15;
+		d=20;
+	
+		
+		if ((a+b) > (c+d))
+			
+			System.out.println("SUM OF A and B IS GREATER THAN C and D");
+		else
+			
+		System.out.println("SUM OF C and D IS GREATER THAN A and B");
+		
+		
+	}
+
+}

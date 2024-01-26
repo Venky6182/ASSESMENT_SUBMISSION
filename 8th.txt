@@ -1,0 +1,15 @@
+package com.programs;
+
+public class Eightprogram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		//To print the given line 10 ctimes
+		
+		for (int i=1; i<=10; i++)
+			
+			System.out.println("Welcome to Guvi");
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.programs;
+
+public class Nineprogram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Program to find he is senior citizen or not
+		
+		char suman = 55;
+		
+		if (suman >= 60) {
+			System.out.println("He is a senior citizen");
+		}
+		else {
+			
+			System.out.println("He is not a senior citizen");
+		}
+		
+	}
+
+}

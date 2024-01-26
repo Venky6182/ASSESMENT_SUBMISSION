@@ -1,0 +1,19 @@
+package com.programs;
+
+public class Seventhprogram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// To find the length of a string
+		
+		String src = "Hello world";
+		int size = src.length();
+		
+		System.out.println(size);
+		
+				
+
+	}
+
+}
