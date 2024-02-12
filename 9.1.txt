@@ -1,0 +1,36 @@
+package com.programs;
+
+public class Nine_One {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "madam";
+		
+		
+		int start = 0;
+		int end = str.length()-1;
+		
+		boolean palindrome = true;
+		
+		
+		while(start<end) {
+			
+			if (str.charAt(start)!=str.charAt(end))
+				palindrome = false;
+			break;
+		}
+		
+		start ++;
+		end --;
+	if(palindrome) {
+		System.out.println("Is palindrome");
+	}
+	else {
+		System.out.println("Not a palindrome");
+	}
+	}
+		
+
+
+}

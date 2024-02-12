@@ -1,0 +1,39 @@
+package com.programs;
+
+import java.util.Scanner;
+
+public class Nine_Five {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a ;
+		
+		System.out.print("Enter the Mark");
+		Scanner sc = new Scanner(System.in);
+		
+		a = sc.nextInt();
+		
+		if(a == 100)
+		{
+			System.out.println("Grade is S");
+		}
+		else if (a >= 90) {
+			System.out.println("Grade is A");
+		}
+		else if (a >= 80) {
+			System.out.println("Grade is B");
+		}
+		else if (a >= 70) {
+			System.out.println("Grade is c");
+		}
+		else if (a >= 50) {
+			System.out.println("Grade is D");
+		}
+		else if (a < 50) {
+			System.out.println("Grade is F");
+		}
+		
+	}
+
+}
