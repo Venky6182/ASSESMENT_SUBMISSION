@@ -1,0 +1,493 @@
+1st program
+
+
+package com.programs;
+
+public class Person {
+	
+	int age;
+	String name;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Person y = new Person();
+		
+		y.School();
+		
+		Person x = new Person(15, "Suresh");
+		
+		x.School();
+		
+	}
+
+	public	Person() {
+		name = "Robert";
+		age = 11;;
+	System.out.println("constructor- with no arguments");
+	}
+	
+	
+	public Person(int age, String name) {
+		this.age = age;
+		this.name = name;
+		System.out.println("constructor-with 2 arguments");
+	}
+	
+	
+	public void School() {
+		System.out.println("name :" + name +" "+ "Age :" + age);
+	}
+	
+}
+
+OUTput
+
+constructor- with no arguments
+name :Robert Age :11
+constructor-with 2 arguments
+name :Suresh Age :15
+
+*******************************************************************************
+2nd Program
+
+package com.programs;
+
+public class Employee {
+	int id;
+	String firstname, lastname;
+	int salary;
+public Employee (int id,String firstname,String lastname,int salary) {
+	this.id= id;
+	this.firstname= firstname;
+	this.lastname = lastname;
+	this.salary = salary;
+}
+public void raisesalary(int percentage) 
+{
+	this.salary =(salary*percentage/100)+salary;
+	System.out.println("Raise Salary :"+salary);
+}
+
+}
+****
+package com.programs;
+
+public class Employeerun extends Employee {
+	public Employeerun(int id, String firstname, String lastname, int salary) {
+		super(id, firstname, lastname, salary);
+		// TODO Auto-generated constructor stub
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	Employeerun obj = new Employeerun(11,"Manik","Basha",5000);
+		
+	obj.getid();
+	obj.getname();
+	obj.getsalary();
+	obj.setsalary(8000);
+		obj.getAnnualsalarye();
+		obj.raisesalary(30);
+		obj.toString();
+	}
+
+	public void setsalary(int salary)
+	{
+		this.salary=salary;
+		System.out.println(salary);
+	}
+	
+	public int getid() {
+		
+		System.out.println("Employee ID :"+id);
+		return id;
+	}
+	public String getFirstname()
+	{
+		System.out.println(firstname);
+		return firstname;
+	}
+	public String getLastname()
+	{
+		System.out.println(lastname);
+		return lastname;
+	}
+	public String getname()
+	{
+		//System.out.println("Employee Name :"+firstname+" "+lastname);
+		return (firstname+""+lastname);
+	}
+	public int getsalary()
+	{
+		System.out.println(salary);
+		return salary;
+	}
+	public int getAnnualsalarye()
+	{
+		System.out.println("Annual Salary :"+salary*12);
+		return (salary*12);
+	}
+	public String toString() {
+		System.out.println(id+" "+getname()+" "+salary);
+		return(id+""+getname()+""+salary);
+	}
+}
+
+OUTPUT
+
+Employee ID :11
+5000
+8000
+Annual Salary :96000
+Raise Salary :10400
+11 ManikBasha 10400
+
+
+*******************************************************************************
+3rd Program
+
+package com.programs;
+
+public class Circumference {
+
+	double radius;
+	double output;
+	double pi;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Circumference x = new Circumference(15.5, 3.14);
+		
+		System.out.println(" Circumference of a circle is");
+		x.formula();
+	}
+	
+	public Circumference() 
+	{
+		
+		
+		
+	}
+	
+	
+	public Circumference(double a, double b) {
+		
+		radius= a;
+		pi = b;
+		
+	}
+
+	public void formula() {
+		
+		output = 2*pi*radius*radius;
+		
+		System.out.println(output);
+	}
+	
+}
+
+OUTPUT
+ Circumference of a circle is
+1508.77
+***************************************************************************************
+4th Program
+
+package com.programs;
+
+public class Account {
+
+	String bankname;
+	int accno;
+	double balance1;
+	double balance2;
+	double withdraw;
+	double deposit;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Account obj1 = new Account("HDFC",12345);
+		obj1.withdraw();
+		obj1.deposit();
+	}
+	
+	public Account() {
+		
+	}
+	public Account(String bankname, int accno) {
+		
+		this.bankname = bankname;
+      this.accno = accno;
+		
+	}
+
+	public void withdraw() {
+		
+		balance1 = 10000;
+		withdraw = 2000;
+		
+		balance1 = balance1 - withdraw;
+		System.out.println("Bank name : " + bankname);
+		System.out.println("Account no : " + accno);
+                System.out.println("Account balance : " + balance1);
+		System.out.println("Balance amount after withdraw is :" + balance1);
+	}
+public void deposit() {
+		
+		balance2 = balance1;
+		deposit = 5000;
+		
+		balance2 = balance1 + deposit;
+		
+		System.out.println("Balance amount after deposit  is :" + balance2);
+		System.out.println("Final Balance amount : " + balance2);
+	}
+}
+
+OUTPUT
+
+Bank name : HDFC
+Account no : 12345
+Account balance : 10000.0
+Account balance after withdraw : 8000.0
+Balance amount after deposit  is :13000.0
+Final Balance amount : 13000.0
+
+
+****************************************************************************************
+5th Program
+
+package com.programs;
+
+public class Tea {
+
+	String tea;
+	String milk;
+	String sugar;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Tea y = new Tea();
+		
+		y.prepare_t();
+		y.addmilk();
+		y.addsugar();
+		y.print();
+
+	}
+	
+	public void prepare_t(){
+	
+	 tea = "Add water and leaves and boil for 3 min";
+		
+	}
+	
+	public void addmilk() {
+		
+	milk="Add leaves,add some milkand boil for 3 min";	
+		}
+	
+	public void addsugar() {
+		
+	sugar="After tea is prepared add two spoon of sugar and staer it well";
+			}
+
+	public void print(){
+		
+		System.out.println(	"Prepare  tea : " + tea);
+		System.out.println("Add  milk : " + milk);
+		System.out.println("Add  sugar :" + sugar);
+		 
+	}
+}
+
+OUTPUT
+Prepare  tea : Add water and leaves and boil for 3 min
+Add  milk : Add leaves,add some milkand boil for 3 min
+Add  sugar :After tea is prepared add two spoon of sugar and staer it well
+
+*****************************************************************************************
+
+6th Program
+
+package com.programs;
+
+//MULTIPLE INHERITANCE
+
+public class Herbaltea extends Blacktea {
+
+			String tea;
+		String milk;
+		String sugar;
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			
+	       Herbaltea y = new Herbaltea();
+			
+			y.Herbal();
+			y.H_addmilk();
+			y.H_addsugar();
+			y.Green();
+			y.Black();
+			y.Preparetea();
+		}
+
+		public void Herbal(){
+			
+			 tea = "Add water and leaves and boil for 3 min";
+			 
+			 System.out.println(	"Herbal  tea : " + tea);
+				
+			}
+		
+		// Overriding method Preparetea
+			
+		public void Preparetea(){
+			
+			 tea = "Leaves + hotwater + 3spoon sugar, then Herbal tea is ready";
+			 
+			 System.out.println(	"Preparetea : " + tea);
+				
+			}
+		
+			public void H_addmilk() {
+				
+			milk="Add leaves,add some milkand boil for 3 min";	
+			
+			 System.out.println(	"Herbal  Addmilk : " + tea);
+				}
+			
+			public void H_addsugar() {
+				
+			sugar="After tea is prepared add two spoon of sugar and staer it well";
+			
+			System.out.println(	"Herbal  Addsugar : " + tea);
+					}
+	}
+*****
+Anotherprogram with class Blacktea
+
+package com.programs;
+
+public class Blacktea extends Greentea 
+
+{
+	String tea;
+	String milk;
+	String sugar;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+       Blacktea y = new Blacktea();
+		
+		y.Black();
+		y.B_addmilk();
+		y.B_addsugar();
+		y.Preparetea();
+		
+		y.Green();
+		y.G_addmilk();
+	}
+
+	public void Black(){
+		
+		 tea = "Add water and leaves and boil for 3 min";
+		 
+		 System.out.println(	"Black  tea : " + tea);
+		}
+	
+	// Overriding method Preparetea
+	public void Preparetea(){
+		
+		 tea = "Leaves + hotwater + 3spoon sugar, then Black tea is ready";
+		 
+		 System.out.println(	"Preparetea : " + tea);
+			
+		}
+		
+		public void B_addmilk() {
+			
+		milk="Add leaves,add some milkand boil for 3 min";	
+		
+		System.out.println("Black Addmilk : " + milk);
+			}
+		
+		public void B_addsugar() {
+			
+		sugar="After tea is prepared add two spoon of sugar and staer it well";
+		
+		System.out.println(" Black Addsugar :" + sugar);
+				}	
+}
+****
+Another program with class Green tea
+
+package com.programs;
+
+public class Greentea {
+
+	String tea;
+	String milk;
+	String sugar;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+       Greentea y = new Greentea();
+		
+		y.Green();
+		y.G_addmilk();
+		y.G_addsugar();
+		y.Preparetea();
+	}
+
+	public void Green(){
+		
+		 tea = "Add water and leaves and boil for 3 min";
+		 
+		 System.out.println(	"Green  tea : " + tea);
+			
+		}
+	// Overriding method Preparetea
+		
+	public void Preparetea(){
+		
+		 tea = "Leaves + hotwater + 3spoon sugar, then Green tea is ready";
+		 
+		 System.out.println(	"Preparetea : " + tea);
+			
+		}
+	
+		public void G_addmilk() {
+			
+		milk="Add leaves,add some milkand boil for 3 min";	
+		 
+		 System.out.println(	"Green addmilk : " + tea);
+			}
+		
+		public void G_addsugar() {
+			
+		sugar="After tea is prepared add two spoon of sugar and staer it well";
+		
+		System.out.println(	"Green addsugar : " + tea);
+				}	
+}
+
+the below out is from Multiple inheritance class Herbal tea, with overiding method as Preparetea
+OUTPUT
+
+Herbal  tea : Add water and leaves and boil for 3 min
+Herbal  Addmilk : Add water and leaves and boil for 3 min
+Herbal  Addsugar : Add water and leaves and boil for 3 min
+Green  tea : Add water and leaves and boil for 3 min
+Black  tea : Add water and leaves and boil for 3 min
+Preparetea : Leaves + hotwater + 3spoon sugar, then Herbal tea is ready
+
+**********************************************************************************************************************************************************************
