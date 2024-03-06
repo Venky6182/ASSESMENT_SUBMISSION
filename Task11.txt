@@ -1,0 +1,265 @@
+TASK 11
+
+
+1st Question
+
+Four access mofifiers in java are
+    *Private
+    *Default
+    *Protected
+    *Public
+
+AccessModifier	withinclass	withinpackage	outsidepackage by subclass  onlyoutsidepackage
+Private	           Y		    N                         N                    N
+Default	           Y	            Y	                      N	                   N
+Protected	   Y	            Y	                      Y	                   N
+Public	           Y	            Y	                      Y	                   Y
+
+*******************************************************************************************************************************************
+2nd Question
+
+ S.No	Errors
+1	Errors primarily arise due to the lack of system resources.
+2	Recovery from an error is typically not possible.
+3	All errors in Java are unchecked.
+4	The system executing the program is responsible for errors.
+5	Errors are defined in the java.lang.Error package.
+
+S.No	Exceptions
+1	Exceptions may occur during both runtime and compile time.
+2	Recovery from an exception is possible.
+3	Exceptions in Java can be either checked or unchecked.
+4	The program's code is responsible for exceptions.
+5	Exceptions are defined in the java.lang.Exception package.
+
+*******************************************************************************************************************************************
+
+3rd Question
+
+S.No.	Checked Exception
+1	Checked exceptions happen at compile time when the source code is transformed into an executable code.
+2	The checked exception is checked by the compiler.
+3	Checked exceptions can be created manually.
+4	This exception is counted as a sub-class of the class.
+5	Java Virtual Machine requires the exception to to be caught or handled.
+
+S.No.	Unchecked Exception
+1	Unchecked exceptions happen at runtime when the executable program starts running.
+2	 These types of exceptions are not checked by the compiler.
+3	They can also be created manually.
+4	This exception happens in runtime, and hence it is not included in the exception class.
+5	Java Virtual Machine does not need the exception to be caught or handled.
+
+*******************************************************************************************************************************************
+4th Question
+
+
+package com.programs;
+
+import java.util.Scanner;
+
+public class DivException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num1,num2,result;
+		
+		
+		Scanner sc = new Scanner(System.in);
+			num1=sc.nextInt();
+			num2=sc.nextInt();
+		try {
+			result = num1/num2;
+			System.out.println(result);
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}			
+	}
+}
+
+OUTPUT
+
+5
+0
+java.lang.ArithmeticException: / by zero
+
+*******************************************************************************************************************************************
+5th Question
+
+package com.programs;
+
+public class Stringexcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(".......Arrays out of boundry exception.");
+		int arr[] = new int[5];
+		try {
+			
+			System.out.println(arr[6]);
+			}catch (Exception e) {
+				System.out.println(e);
+			}
+		System.out.println();
+		System.out.println("stringinsex out of boundry exception");
+		String str = "Peter";
+		try {
+			System.out.println(str.charAt(7));
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+}
+
+OUTPUT
+
+.......Arrays out of boundry exception.
+java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 5
+
+stringinsex out of boundry exception
+java.lang.StringIndexOutOfBoundsException: String index out of range: 7
+
+*******************************************************************************************************************************************
+6th Question
+
+package com.programs;
+
+import java.util.Scanner;
+
+public class LoginSystem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String username = "John";
+		String password = "John@123";
+		String match;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		match = sc.nextLine();
+		
+		try {
+			
+			if(password.equals(match)) {
+				System.out.println("Login Successsful");
+			}
+			else
+			{
+				System.out.println("Error message");
+			}
+		}
+			catch (Exception e) 
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+
+OUTPUT
+
+John@123
+Login Successsful
+
+jfhfhbhbbhsdbh
+Error message
+
+
+*******************************************************************************************************************************************
+7th Question
+
+public class MyOwnException extends Exception {
+	private static final long serialVersionUID = 1L;
+	public MyOwnException(String exc) {
+		super(exc);
+	}
+	
+}
+
+public class MyMain {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyMain obj = new MyMain();
+		
+		
+		try {
+			obj.ageCalc(70);
+		} catch (MyOwnException e) {
+			System.out.println(e);
+		}
+	}
+	
+	
+	public void ageCalc(int age) throws MyOwnException {
+		if (age > 60) {
+			System.out.println("Senior Citizen");
+		} else if (age > 30) {
+			System.out.println("Adult");
+		} else if (age > 18) {
+			System.out.println("New Adult");
+		} else {
+			throw new MyOwnException("InvalidAgeException");
+		}
+		
+	}
+	
+}
+OUT PUT
+
+Senior Citizen
+
+*******************************************************************************************************************************************
+8th Question
+
+
+package com.programs;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Fileexception {
+
+public static void main(String[] args) {
+	
+	try {
+		
+		
+		FileInputStream input = new FileInputStream("D:\\Venkatesh\\Work extracts\\File1.txt");
+		
+		int s=0;
+		String str = "";
+		while (s != -1) {
+			s = input.read();
+			str = str + (char)s;
+		}
+	
+		input.close();
+
+		System.out.print(str);
+		
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+}
+
+OUTPUT
+
+1.hello
+ world	
+
+2. java.io.FileNotFoundException: D:\Venkatesh\Work extracts\File.txt (The system cannot find the file specified)
+
+*******************************************************************************************************************************************
